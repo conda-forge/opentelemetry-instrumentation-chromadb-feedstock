@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-chromadb" %}
-{% set version = "0.40.2" %}
+{% set version = "0.40.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_chromadb-{{ version }}.tar.gz
-  sha256: dc4829111a152b062daa7435cd9cc93c39bba7325d3682072c56e1ac5d016950
+  sha256: dc7e858bf98b1c9d4af628d6eea2cf174a83fe8349b455e61e91a5473fa0a216
 
 build:
   noarch: python
