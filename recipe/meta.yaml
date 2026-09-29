@@ -1,13 +1,13 @@
 {% set name = "opentelemetry-instrumentation-chromadb" %}
-{% set version = "0.62.3" %}
+{% set version = "0.62.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_chromadb-{{ version }}.tar.gz
-  sha256: 58c6289e161ed7e97a5012d3b04127ea2ff9d8e7aefc7b9da1a19828a557c0bf
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_chromadb-{{ version }}.tar.gz
+  sha256: ec34bd759e58c4a23dc333d664bd396c89cf3aa2bbbfb4f46f558006d93cab38
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - opentelemetry-api >=1.38.0,<2.0.0
     - opentelemetry-instrumentation >=0.59b0
-    - opentelemetry-semantic-conventions >=0.59b0
+    - opentelemetry-semantic-conventions >=0.63b1
     - opentelemetry-semantic-conventions-ai >=0.5.1,<0.6.0
   run_constrained:
     - chromadb >=0.5.0,<0.6.0
@@ -37,6 +37,7 @@ test:
     - pip
     - python {{ python_min }}
     - chromadb
+    - opentelemetry-exporter-otlp-proto-grpc >=1.38.0
 
 about:
   home: https://www.traceloop.com/openllmetry
